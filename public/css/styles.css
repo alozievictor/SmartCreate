@@ -1,0 +1,147 @@
+/* @import url('../node_modules/font-awesome/css/font-awesome.min.css'); */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;    
+}
+.landing{
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    object-fit: cover;
+}
+nav{
+    width: 100%;
+    margin: 0 auto;
+    background-color:rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(206, 206, 206);
+}
+.nav-div{
+    display: flex;
+    position: relative;
+    width: 70%;
+    margin: 0 auto;
+}
+.navbar h3{
+    color: #000;
+    font-size: 25px;
+    margin-left: 20px;
+}
+.navbar h3 span{
+    padding:5px 10px; 
+    background-color:rgb(78, 239, 188);
+    border-radius: 5px;
+    font-size: 25px;
+    cursor: pointer;
+}
+.nav-link{
+    color: #000;
+    text-decoration: none;
+}
+.nav-link:hover{
+    color: #000;
+    text-decoration: none;
+}
+.collapse {
+    justify-content: flex-end;
+    padding:0 10px;
+    margin-right: 70px;
+}
+.content-name{
+    font-size:20px;
+}
+img{
+    position: relative;
+    width: 100%;
+}
+
+.row{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+.text-btn{
+    width: 150px;
+    display: flex;
+    position: relative;
+    top: 5%;
+    border: 1px solid black;
+    color: rgb(6, 79, 55);
+    font-size: 18px;
+    padding: 8px 20px;
+    text-decoration: none;
+    list-style: none;
+    transition: all 300ms ease;
+} 
+.text-btn:hover{
+    border: none;
+    background-color: rgb(78, 239, 188);
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 300ms ease-in;
+}
+#form-body{
+    margin-top: 50px;
+}
+form{
+    width: 50%;
+    margin: 0 auto;
+}
+.table-text{
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 300;
+
+}
+.btn-div a{
+    margin-left: 10px;
+    justify-content: space-between;
+    align-items: center;
+    /* padding:15px 10px; */
+
+}
+a.login{
+    border: 1px solid rgb(78, 239, 188);
+    color: #000;
+    padding: 10px 13px;
+    border-radius: 5px;
+}
+a.signup{
+    background:rgb(78, 239, 188);
+    color: #000;
+    padding: 10px 13px;
+    border-radius: 5px;
+}
+a.login:hover{
+    color: #000;
+    transition: all 300ms ease;
+    background:rgb(78, 239, 188);
+    cursor: pointer;
+    list-style: none;
+    text-decoration: none;
+}
+a.signup:hover{
+    color: #000;
+    transition: all 300ms ease;
+    background:rgb(78, 239, 188);
+    cursor: pointer;
+    list-style: none;
+    text-decoration: none;
+}
+/* .split{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+} */
+/* 
+
+style the nav bar properly 
+work on the sign up and login 
+style all button properly */

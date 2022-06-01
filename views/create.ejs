@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head.ejs')%>
+</head>
+<body>
+    <%- include('partials/nav.ejs')%>
+    <div class="container table-text">
+        <p> input requred details so as to create your personal timetable </p>
+    </div>
+
+
+    <div class="container" id="form-body">
+        <%- include('partials/messages.ejs') %>
+        <form action="/create" method="post">
+            <div class="mb-3">
+              <label for="validationTextarea" class="form-label">Enter Courses</label>
+              <textarea class="form-control is-invalid" id="validationTextarea" name="courese" required></textarea>
+            </div>
+          
+            <div class="mb-3">
+                <label for="validationTextarea" class="form-label">Select study hour</label>
+                <br>
+              <select class="form-select" name="hour" required aria-label="select example">
+                <option value="">Select Hour</option>
+                <option value="1">One hour</option>
+                <option value="2">Two hours</option>
+                <option value="3">Three hours</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="validationTextarea" class="form-label">select period</label>
+                <br>
+              <select class="form-select" name="period" required aria-label="select example">
+                <option value="">Select period</option>
+                <option value="1">Morning and Afternoon</option>
+                <option value="2">afternoon and Evening</option>
+                <option value="3">Morning and Evening</option>
+              </select>
+            </div>
+
+            <div class="form-check mb-3">
+                <input type="checkbox" class="form-check-input" id="validationFormCheck1" required>
+                <label class="form-check-label" for="validationFormCheck1">Agree to our terms and condition stated</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <div class="mb-3">
+              
+            </div>
+        </form>
+    </div>
+    
+    
+</body>
+</html>
