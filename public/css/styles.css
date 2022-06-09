@@ -135,6 +135,16 @@ a.signup:hover{
     list-style: none;
     text-decoration: none;
 }
+.btn-dev{
+    width: 58%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+.btn-dev a{
+    
+}
+
 /* .split{
     display:flex;
     justify-content: center;

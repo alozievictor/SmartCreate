@@ -1,17 +1,21 @@
 const mongoose = require('mongoose');
+const user = require('./User')
 
 const CourseSchema = new mongoose.Schema({
-    courses: {
-        type : String,
-        required : true
-    },
+    courses : [
+        {
+            type :String,
+            required : true
+
+        }
+    ],
     hour : {
         type : String,
         required : true
     },
     period : {
         type : String,
-        required : true
+        required: true
     },
     date : {
         type : Date,
@@ -19,6 +23,6 @@ const CourseSchema = new mongoose.Schema({
     }
 })
 
-const tableContent = mongoose.model('tableContent', CourseSchema)
+const UserCourse = mongoose.model('UserCourse', CourseSchema)
 
-module.exports = tableContent;
+module.exports = UserCourse;

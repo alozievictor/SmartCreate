@@ -6,11 +6,15 @@ const User = require('./models/User')
 const tableContent = require('./models/course');
 const bcrypt = require('bcrypt')
 const flash = require('connect-flash')
-const session = require('express-session')
+const session = require('express-session');
+const passport = require('passport');
+// const passportLocalMongoose = require('passport-local-mongoose')
 
 const app = express();
 const PORT = 3000;
 connectDB()
+
+require('./routes/passport')(passport);
  
 app.set('view engine', 'ejs');
 
@@ -27,10 +31,14 @@ app.use(session({
     saveUninitialized: true,
 }))
 
+app.use(passport.initialize());
+app.use(passport.session())
+
 app.use(flash())
 
 app.use((req,res, next) => {
-    res.locals.success_msg = req.flash();
+    res.locals.success_msg = req.flash('success_msg');
+    res.locals.error_msg = req.flash('error_msg')
     next()
 })
 
@@ -98,7 +106,8 @@ app.post('/signup', (req, res) => {
                    newUser.password = hash; 
                    newUser.save()
                    .then(user => {
-                       res.redirect('/User/login')
+                       req.flash('success_msg', 'your are now registered')
+                       res.redirect('/login')
                    })
                    .catch(err => console.log(err))
                }))
@@ -106,6 +115,19 @@ app.post('/signup', (req, res) => {
        })
     }
 })
+
+app.post('/login', (req, res, next) => {
+    passport.authenticate('local', {
+        successRedirect:  '/', 
+        failureRedirect: '/login',
+        failureFlash: true
+    }) (req, res, next);
+});
+
+app.post('/create', (req, res) => {
+    
+})
+
 
 app.post('./create', (req, res) => {
     const {courses, hour, period } = req.body;

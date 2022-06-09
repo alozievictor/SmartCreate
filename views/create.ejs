@@ -8,14 +8,12 @@
     <div class="container table-text">
         <p> input requred details so as to create your personal timetable </p>
     </div>
-
-
     <div class="container" id="form-body">
         <%- include('partials/messages.ejs') %>
         <form action="/create" method="post">
             <div class="mb-3">
               <label for="validationTextarea" class="form-label">Enter Courses</label>
-              <textarea class="form-control is-invalid" id="validationTextarea" name="courese" required></textarea>
+              <textarea class="form-control is-invalid" id="validationTextarea" name="coureses" required></textarea>
             </div>
           
             <div class="mb-3">
