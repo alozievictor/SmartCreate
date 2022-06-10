@@ -3,14 +3,14 @@
     margin: 0;
     box-sizing: border-box;
 }
-.form-dev{
-    width: 35%;
+form .form-dev{
+    width: 100%;
     background: rgb(179, 229, 238);
     position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%);
-    margin:50px 0;
+    margin:60px 0;
     border-radius: 20px;
     box-shadow: 2px 5px 8px grey;
 }
@@ -32,4 +32,8 @@ small a{
     border-bottom: 1px solid rgb(92, 234, 229);
     font-size: 15px;
     padding-left: 5px;
+}
+
+@media screen {
+    
 }

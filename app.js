@@ -118,7 +118,7 @@ app.post('/signup', (req, res) => {
 
 app.post('/login', (req, res, next) => {
     passport.authenticate('local', {
-        successRedirect:  '/', 
+        successRedirect:  '/create', 
         failureRedirect: '/login',
         failureFlash: true
     }) (req, res, next);
